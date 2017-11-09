@@ -12,9 +12,26 @@ class ViewController: UIViewController {
     var b = Array(repeating: Array(repeating: 0, count: 4), count: 4)
     
     @IBOutlet weak var score: UILabel!
+    @IBAction func newgame(_ sender: UIButton) {
+        newgame()
+    }
+    
     var lose = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        start()
+    }
+    func newgame()
+    {
+        lose = false
+        b = Array(repeating: Array(repeating: 0, count: 4), count: 4)
+        start()
+        let Score = 0
+        score.text = String(Score)
+    }
+    
+    func start()
+    {
         let directions: [UISwipeGestureRecognizerDirection] = [.right, .left, .up, .down]
         for direction in directions {
             let gesture = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.respondToSwipeGesture(_:)))
@@ -23,6 +40,7 @@ class ViewController: UIViewController {
         }
         randomNum(-1)
     }
+    
     func randomNum(_ type: Int)
     {
         if(!lose)
@@ -97,7 +115,7 @@ class ViewController: UIViewController {
         let label = self.view.viewWithTag(numlabel) as! UILabel
         label.backgroundColor = color
     }
-    func respondToSwipeGesture(_ gesture: UIGestureRecognizer) {
+    @objc func respondToSwipeGesture(_ gesture: UIGestureRecognizer) {
         
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "game2048/ViewController.swift"
-            timestampString = "530129462.688435"
+            timestampString = "531929203.984641"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "randomNum(_:)"
             landmarkType = "7">
          </BreakpointContent>
